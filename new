@@ -1,0 +1,71 @@
+#! /bin/bash
+list_table.sh
+
+echo "===============Select Table==============="
+echo
+echo "Enter Table You Want To Select"
+read -r tablename
+#this condition is used to cheack if the table exist
+if [ -f $tablename ] 
+then
+            echo "==========$tablename selected=========="
+
+            #the input data array or the row data
+            declare -a input
+
+            #the element index that the code standing at
+            input_index=0
+            #the worning of the primary key repetance
+            flag=0
+            #reading number of columns
+            num_col=$(head -1 $tablename)
+
+            #reading primary key
+            pkey_index=$(head -2 $tablename | tail -1)
+
+            #reading columns names
+            column_name=$(head -4 $tablename | tail -1) #cloumn names
+
+            #reading data types
+            column_datatype=$(head -3 $tablename | tail -1) #data types
+
+            #adding the colmunns name to array
+            column_name_array=($(echo "$column_name" | sed 's/:/ /g'))
+
+            #adding data types to array 
+            column_datatype_array=($(echo "$column_datatype" | sed 's/:/ /g'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if(NR=="'$r_num'"){
+                for(i=1;i<=NF;i++){
+                    if(i=="'$column_index'") 
+                    print i 
+                    }
+                        }
